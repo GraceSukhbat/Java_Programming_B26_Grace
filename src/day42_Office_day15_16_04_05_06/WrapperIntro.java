@@ -1,0 +1,70 @@
+package day42_Office_day15_16_04_05_06;
+
+public class WrapperIntro {
+    public static void main(String[] args) {
+
+        /*
+
+        Why do we need wrapper classes?
+
+        - Collection allows only OBJECTS (non-primitive)
+                String, Integer, Double, etc
+        - Collection --> Arraylist etc
+        - Wrapper classes have many useful methods
+
+                - Character.isDigit()
+                - Character.isUpperCase()
+                - Character.isLowerCase()
+                - valueOf vs parseInt()/parseDouble() etc
+
+         - to convert primitives to OBJECTS
+
+         - Autoboxing vs Unboxing
+
+         Autoboxing --> Primitive to OBJECTS
+         Unboxing --> OBJECTS to primitive
+
+         */
+
+        System.out.println("-----------------");
+        // Autoboxing --> Primitive to OBJECTS
+
+        Integer a = new Integer(30); //
+
+        Integer b = 30; // converting int 30 to Integer
+         // these 2 are totally same
+        System.out.println("-----------------");
+
+        // Unboxing --> OBJECTS to primitive
+        Integer c = Integer.valueOf(30);
+
+        int d = c;  // unboxing
+        System.out.println("-----------------");
+        // valueOf vs parseInt()/parseDouble() etc
+
+            // valueOf() --> returns Objects (Wrapper Class)
+            // parseMethods() --> returns primitives
+
+        int e = Integer.parseInt("123");
+        Integer f = Integer.valueOf(123);
+
+        System.out.println("-----------------");
+
+        // Wrapper Classes Methods
+
+        System.out.println(Character.isDigit('a')); // False
+        System.out.println(Character.isUpperCase('a')); // False
+        System.out.println(Character.isLowerCase('a')); // True
+
+        System.out.println("-----------------");
+
+        // Casting is not possible with Wrapper Classes
+        Integer num = Integer.valueOf(123);
+//        Double doub = num; NOT VALID
+
+
+
+
+    }
+
+}

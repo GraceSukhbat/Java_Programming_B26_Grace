@@ -1,0 +1,13 @@
+package day35_methods;
+import my_utilities.ArrayUtil;
+public class UsingArrayUtil {
+    public static void main(String[] args) {
+
+        int [] a = {3, 1, 6, 12, 7, 1, 29};
+        System.out.println(ArrayUtil.minNumber(a));
+
+        System.out.println(ArrayUtil.maxNumber(a));
+
+        System.out.println(ArrayUtil.contain(a, 3));
+    }
+}
