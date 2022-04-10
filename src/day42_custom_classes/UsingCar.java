@@ -22,5 +22,7 @@ public class UsingCar {
 
         System.out.println(carTwo);
         carTwo.drive();
+        carTwo.fillTank();
+        carTwo.isLow();
     }
 }
