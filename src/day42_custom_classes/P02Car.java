@@ -27,14 +27,7 @@ Create a separate class to create Car objects and test the methods created
     String color;
     double fuelLevel;
 
-    public String toString() {
-        return "P02Car{" +
-                "model='" + model + '\'' +
-                ", year=" + year +
-                ", color='" + color + '\'' +
-                ", fuelLevel=" + fuelLevel +
-                '}';
-    }
+
     public void drive(){
         System.out.println("Driving " + model);
         fuelLevel -=5;
@@ -44,12 +37,15 @@ Create a separate class to create Car objects and test the methods created
         fuelLevel = 100;
         System.out.println("fuel level is at: " + fuelLevel + "%");
     }
-    public void isLow(){
-        System.out.println("is the fuel level low?");
-        if(fuelLevel < 25){
-            System.out.println("true");
-        } else {
-            System.out.println("false");
-        }
+    public boolean isLow(){
+        return fuelLevel <25;
+    }
+
+    public String toString() {
+        return "Model: " + model +
+                "\nYear: " + year +
+                "\nColor: " + color +
+                "\nFuel Level: " + fuelLevel + "%" +
+                "\n" + (isLow() ? "Tank is Low" : "Keep on driving");
     }
 }
